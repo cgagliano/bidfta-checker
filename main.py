@@ -23,22 +23,6 @@ class Item:
 		
 		return item_name, current_price, expiration_date, time_remaining
 
-def find_text_between(text, str1, str2):
-	
-	front_first = 0
-	front_last = len(str1)
-	back_first = len(text) - len(str2) - 1
-	back_last = len(text)
-	
-	seek_front = text[front_first : front_last]
-	seek_back = text[back_first : back_last]
-	
-	if seek_front == str1 and seek_back == str2:
-		return text[len(str1):len(text) - len(str2)]
-	else:
-		find_text_between(text[1:-1], str1, str2)
-		
-		
 URL = "https://www.bidfta.com/503611/item-detail/41677976"
 
 item1 = Item(URL)
